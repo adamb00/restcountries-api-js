@@ -78,6 +78,11 @@ $borrad: 5px;
     border: none !important;
     box-shadow: $color-very-dark-blue-light-mode-text 0px 0px 9px 1px !important;
   }
+  .btnDarkMode,
+  .btnFilter,
+  .btnHome {
+    color: $color-white-dark-mode-text-light-mode-elem;
+  }
 }
 body {
   font-family: $ff;
@@ -105,6 +110,11 @@ body {
   font-size: 16px;
   font-weight: 300;
   border-bottom: 2px solid $color-very-light-grey-light-mode-bg;
+}
+.btnDarkMode,
+.btnFilter,
+.btnHome {
+  color: $color-dark-blue-dark-mode-elem;
 }
 .container {
   width: 100%;

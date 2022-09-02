@@ -64,6 +64,11 @@
   border: none !important;
   box-shadow: hsl(200deg, 15%, 8%) 0px 0px 9px 1px !important;
 }
+.darkMode .btnDarkMode,
+.darkMode .btnFilter,
+.darkMode .btnHome {
+  color: hsl(0deg, 0%, 100%);
+}
 
 body {
   font-family: "Nunito Sans", sans-serif;
@@ -94,6 +99,12 @@ body {
   font-size: 16px;
   font-weight: 300;
   border-bottom: 2px solid hsl(0deg, 0%, 96%);
+}
+
+.btnDarkMode,
+.btnFilter,
+.btnHome {
+  color: hsl(209deg, 23%, 22%);
 }
 
 .container {
