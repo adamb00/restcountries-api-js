@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ea2e4fd0c3.js"
+      crossorigin="ea2e4fd0c3"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Rest countries design</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="where">Where in the world?</div>
+      <div class="mode">
+        <button class="button btnDarkMode" id="btnDarkMode">
+          <i class="fa-solid fa-moon"></i>
+          Dark Mode
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="searchAndFilter">
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Search for a country... "
+            class="searchInput"
+          />
+        </div>
+        <div class="filter">
+          <button class="btnFilter" id="btnFilter">
+            Filter by Region
+
+            <i class="fa-solid fa-angle-down"></i>
+          </button>
+          <div class="dropdown-content myDropdown">
+            <a href="#Africa" id="africa">Africa</a>
+            <a href="#America" id="america">America</a>
+            <a href="#Europe" id="europe">Europe</a>
+            <a href="#Asia" id="asia">Asia</a>
+            <a href="#Oceania" id="oceania">Oceania</a>
+          </div>
+        </div>
+        <button class="btnHome" id="btnHome">Home</button>
+      </div>
+      <div class="countries"></div>
+    </div>
+    <script defer src="app.js"></script>
+  </body>
+</html>

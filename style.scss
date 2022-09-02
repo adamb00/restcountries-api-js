@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+$ff: 'Nunito Sans', sans-serif;
+$color-dark-blue-dark-mode-elem: hsl(209, 23%, 22%);
+$color-very-dark-blue-dark-mode-bg: hsl(207, 26%, 17%);
+$color-very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
+$color-dark-grey-light-mode-input: hsl(0, 0%, 52%);
+$color-very-light-grey-light-mode-bg: hsl(0, 0%, 96%);
+$color-very-light-grey-light-mode-bg-shadow: hsl(0, 0%, 90%);
+$color-white-dark-mode-text-light-mode-elem: hsl(0, 0%, 100%);
+$fs-homepage: 14px;
+$fs-detailpage: 16px;
+$borrad: 5px;
+
+.darkMode {
+  .header {
+    background-color: $color-dark-blue-dark-mode-elem;
+    color: $color-white-dark-mode-text-light-mode-elem;
+  }
+  .header button {
+    color: $color-white-dark-mode-text-light-mode-elem;
+    border: none;
+  }
+  .container {
+    background-color: $color-very-dark-blue-dark-mode-bg;
+  }
+  .searchInput {
+    background-color: $color-dark-blue-dark-mode-elem;
+    box-shadow: none;
+    color: $color-very-light-grey-light-mode-bg;
+  }
+  .btnHome {
+    box-shadow: none;
+    color: $color-very-light-grey-light-mode-bg;
+    background-color: $color-dark-blue-dark-mode-elem;
+  }
+  .btnFilter {
+    box-shadow: none;
+    color: $color-very-light-grey-light-mode-bg;
+    background-color: $color-dark-blue-dark-mode-elem;
+  }
+  .dropdown-content {
+    background-color: $color-dark-blue-dark-mode-elem;
+    border: none;
+  }
+  .dropdown-content a {
+    color: $color-white-dark-mode-text-light-mode-elem;
+  }
+  .dropdown-content a:hover {
+    background-color: $color-very-dark-blue-dark-mode-bg;
+  }
+  .country {
+    background-color: $color-dark-blue-dark-mode-elem;
+    color: $color-white-dark-mode-text-light-mode-elem;
+  }
+  .singleCountry {
+    background-color: $color-very-dark-blue-dark-mode-bg;
+    color: $color-white-dark-mode-text-light-mode-elem;
+    .countryData {
+      background-color: $color-very-dark-blue-dark-mode-bg;
+    }
+  }
+  .singleCountry button {
+    background-color: $color-dark-blue-dark-mode-elem;
+    color: $color-white-dark-mode-text-light-mode-elem;
+    border: none;
+    box-shadow: $color-very-dark-blue-light-mode-text 0px 0px 9px 1px;
+  }
+  .btnBorders {
+    background-color: $color-dark-blue-dark-mode-elem !important;
+    color: $color-white-dark-mode-text-light-mode-elem !important;
+    border: none !important;
+    box-shadow: $color-very-dark-blue-light-mode-text 0px 0px 9px 1px !important;
+  }
+  .btnInfo {
+    background-color: $color-dark-blue-dark-mode-elem !important;
+    color: $color-white-dark-mode-text-light-mode-elem !important;
+    border: none !important;
+    box-shadow: $color-very-dark-blue-light-mode-text 0px 0px 9px 1px !important;
+  }
+}
+body {
+  font-family: $ff;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  box-shadow: $color-very-light-grey-light-mode-bg-shadow 0 1px 0 0;
+  padding: 10px 0 15px;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+}
+.where {
+  padding: 5px 30px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.btnDarkMode {
+  border: none;
+  background-color: transparent;
+  padding: 5px 30px;
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 2px solid $color-very-light-grey-light-mode-bg;
+}
+.container {
+  width: 100%;
+  background-color: $color-very-light-grey-light-mode-bg;
+  height: auto;
+  margin: auto;
+}
+.searchAndFilter {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 15px;
+
+  button {
+    background-color: $color-white-dark-mode-text-light-mode-elem;
+    box-shadow: $color-very-light-grey-light-mode-bg-shadow 0 1px 0 0;
+    border: none;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: $borrad;
+    margin: 0 15px;
+  }
+}
+
+.btnHome {
+  background-color: $color-white-dark-mode-text-light-mode-elem;
+  box-shadow: $color-very-light-grey-light-mode-bg-shadow 0 1px 0 0;
+  border: none;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: $borrad;
+  text-align: center;
+  margin: 0 15px;
+}
+.btnFilter:hover,
+.btnFilter:focus {
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $color-white-dark-mode-text-light-mode-elem;
+  min-width: 230px;
+  border: 1px solid $color-very-light-grey-light-mode-bg-shadow;
+  z-index: 1;
+  border-radius: $borrad;
+  margin-top: 2px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: $color-very-light-grey-light-mode-bg-shadow;
+}
+
+.show {
+  display: block;
+}
+.searchInput {
+  padding: 15px 15px;
+  box-shadow: $color-very-light-grey-light-mode-bg-shadow 0 1px 0 0;
+  border-radius: $borrad;
+  border: none;
+  width: 150%;
+}
+.searchInput:focus,
+.searchInput:hover {
+  outline: none;
+}
+
+.countries {
+  margin: 0;
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: auto;
+}
+.country {
+  background-color: $color-white-dark-mode-text-light-mode-elem;
+  width: 245px;
+  max-width: 350px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: $borrad;
+  border: none;
+  display: block;
+  .flag {
+    background-size: 150px;
+    width: 350px;
+    height: 200px;
+    scale: 82%;
+    position: relative;
+    display: block;
+    left: -14%;
+    top: -7%;
+    border-radius: $borrad;
+    padding: 0;
+    margin: 0;
+  }
+  .name {
+    padding-left: 20px;
+    margin: 5px;
+    font-size: $fs-detailpage;
+    font-weight: 800;
+  }
+  .title {
+    font-weight: 600;
+  }
+  .population {
+    padding-left: 20px;
+    padding-top: 10px;
+    margin: 5px;
+    font-size: $fs-homepage;
+  }
+  .region {
+    padding-left: 20px;
+    margin: 5px;
+    font-size: $fs-homepage;
+  }
+  .capital {
+    padding-left: 20px;
+    margin: 5px 5px 20px 5px;
+    font-size: $fs-homepage;
+  }
+  .btnInfo {
+    margin: 5px 20px;
+    background-color: $color-white-dark-mode-text-light-mode-elem;
+    box-shadow: $color-very-light-grey-light-mode-bg-shadow 0 1px 0 0;
+    border: none;
+    width: auto;
+  }
+}
+.singleCountry {
+  display: block;
+  width: auto;
+  height: auto;
+  background-color: $color-very-light-grey-light-mode-bg;
+  margin: auto;
+
+  .btnBack {
+    margin: 100px 10%;
+    padding: 10px 30px;
+    border-radius: $borrad;
+    border: 2px solid $color-very-light-grey-light-mode-bg-shadow;
+    background-color: $color-white-dark-mode-text-light-mode-elem;
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .countryData {
+    width: auto;
+    height: auto;
+    display: grid;
+    background-color: $color-very-light-grey-light-mode-bg;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    padding-bottom: 200px;
+    .countryFlag img {
+      width: 150%;
+      border-radius: $borrad;
+    }
+    .countryFlag {
+      margin: auto;
+    }
+    .countryDesc {
+      margin: 100px auto;
+      padding: 0;
+      height: auto;
+      width: auto;
+      display: block;
+    }
+    .column1 {
+      margin: 0 150px;
+      line-height: 25px;
+      font-size: $fs-detailpage;
+    }
+    .column2 {
+      line-height: 25px;
+      margin-top: 40px;
+      font-size: $fs-detailpage;
+    }
+    .name {
+      font-size: 35px !important;
+      font-weight: 800;
+      padding: 0 0 20px 0;
+    }
+    .title {
+      font-weight: 600;
+    }
+    .borders {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      width: 250%;
+    }
+
+    .btnBorders {
+      margin-left: 15px;
+      padding: 10px 20px;
+      border-radius: $borrad;
+      border: 2px solid $color-very-light-grey-light-mode-bg-shadow;
+      background-color: $color-white-dark-mode-text-light-mode-elem;
+    }
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .container {
+    padding: 0;
+  }
+  .countries {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    margin: auto;
+    padding: 0;
+  }
+  .searchInput {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .searchAndFilter {
+    display: block;
+    margin: auto;
+    align-items: center;
+  }
+  .btnFilter {
+    width: auto;
+    margin: auto;
+  }
+
+  .filter {
+    width: auto;
+    margin: auto;
+    display: block;
+  }
+  .btnHome {
+    width: auto;
+    height: 50%;
+    margin: auto;
+    padding: 10px;
+  }
+  .singleCountry {
+    .countryData {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      .countryFlag img {
+        width: 100%;
+      }
+      .countryFlag {
+        margin: 0;
+        padding: 6%;
+      }
+      .column1 {
+        margin: 50px 50px;
+        font-size: 19px;
+        line-height: 40px;
+      }
+      .column2 {
+        margin: 0 50px;
+        font-size: 19px;
+        line-height: 40px;
+      }
+      .borders {
+        margin-top: 40px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 690px) {
+  .container {
+    padding: 0;
+  }
+  .countries {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+    margin: auto;
+    padding: 0;
+  }
+  .searchAndFilter {
+    display: block !important;
+    margin: auto;
+    padding: 50px;
+  }
+  .searchInput {
+    width: 100%;
+    margin: auto;
+  }
+  .btnFilter {
+    width: auto;
+    margin: 15px auto !important;
+  }
+  .filter {
+    width: auto;
+    display: block !important;
+  }
+  .btnHome {
+    margin: auto !important;
+  }
+  .dropdown-content {
+    position: absolute;
+    min-width: 230px;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -128%);
+  }
+  .singleCountry {
+    .countryData {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      .countryFlag img {
+        width: 100%;
+      }
+      .countryFlag {
+        margin: 0;
+        padding: 6%;
+      }
+      .column1 {
+        margin: 50px 50px;
+        font-size: 19px;
+        line-height: 40px;
+      }
+      .column2 {
+        margin: 0 50px;
+        font-size: 19px;
+        line-height: 40px;
+      }
+      .borders {
+        margin-top: 40px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
+}
