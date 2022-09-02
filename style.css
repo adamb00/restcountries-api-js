@@ -407,12 +407,10 @@ body {
     margin: auto !important;
   }
   .dropdown-content {
-    position: absolute;
-    min-width: 230px;
+    position: relative;
+    max-width: 150px;
     z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -128%);
+    margin: auto;
   }
   .singleCountry .countryData {
     display: grid;
